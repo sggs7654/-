@@ -1,0 +1,32 @@
+public class Main {
+    public static void main(String args[])throws Exception{
+        RobotAdapter d = new RobotAdapter();
+        d.tweet();
+        d.run();
+    }
+}
+interface Robot{
+    void tweet();
+    void run();
+}
+
+class RobotAdapter implements Robot{
+    public void tweet(){
+        Bird.birdTweet();
+    }
+    public void run(){
+        Dog.dogRun();
+    }
+}
+
+class Bird{
+    static void birdTweet(){
+        System.out.println("BirdTweet");
+    }
+}
+
+class Dog{
+    static void dogRun(){
+        System.out.println("DogRun");
+    }
+}
